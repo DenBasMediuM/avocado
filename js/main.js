@@ -5,6 +5,7 @@ console.log('tra ta ta');
 let slider = document.querySelector('.slider'),
     slider1 = document.querySelector('.menu-slider'),
     sliderList = slider.querySelector('.slider-list'),
+    colmen = (sliderList.offsetWidth/200),
     sliderTrack = slider.querySelector('.slider-track'),
     slides = slider.querySelectorAll('.slide'),
     arrows = slider1.querySelector('.slider-arrows'),
@@ -39,7 +40,8 @@ let slider = document.querySelector('.slider'),
         sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
 
         prev.classList.toggle('disabled', slideIndex === 0);
-        next.classList.toggle('disabled', slideIndex === --slides.length - 4);
+
+        next.classList.toggle('disabled', slideIndex === --slides.length - (colmen-1));
     },
     swipeStart = function () {
         let evt = getEvent();
@@ -100,7 +102,7 @@ let slider = document.querySelector('.slider'),
             }
 
             // запрет ухода вправо на последнем слайде
-            if (slideIndex === --slides.length - 4) {
+            if (slideIndex === --slides.length - (colmen-1)) {
                 if (posInit > posX1) {
                     setTransform(transform, lastTrf);
                     return;
@@ -188,3 +190,15 @@ arrows.addEventListener('click', function () {
 
     slide();
 });
+
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("slide");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
