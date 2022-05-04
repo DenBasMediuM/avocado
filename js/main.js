@@ -1,7 +1,3 @@
-// $('body').hide()
-
-console.log('tra ta ta');
-
 let slider = document.querySelector('.slider'),
     slider1 = document.querySelector('.menu-slider'),
     sliderList = slider.querySelector('.slider-list'),
@@ -202,3 +198,18 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+$('.slide').click(function(){
+    let items = document.getElementsByClassName("item");
+    for (let item of items) {
+        item.style.display = "none";
+    } 
+
+    let res = this.classList[1];
+    console.log(res);
+
+    let itemstovs = document.getElementsByClassName(res);
+    for (let itemstov of itemstovs) {
+        itemstov.style.display = "inline";
+    }   
+
+})
