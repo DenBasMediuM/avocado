@@ -22,7 +22,7 @@ let slider = document.querySelector('.slider'),
     nextTrf = 0,
     prevTrf = 0,
     lastTrf = --slides.length * slideWidth,
-    posThreshold = slides[0].offsetWidth * 0.35,
+    posThreshold = slides[0].offsetWidth * 0.5,
     trfRegExp = /([-0-9.]+(?=px))/,
     swipeStartTime,
     swipeEndTime,
@@ -221,7 +221,6 @@ $(document).ready(function(){
         autoplay:true,
         centerMode:true,
         variableWidth:true,
-        // infinite:false
         // responsive:[
         //     {
         //         breakpoint: 700,
