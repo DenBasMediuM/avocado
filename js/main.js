@@ -218,7 +218,7 @@ $(document).ready(function(){
         arrows:true,
         dots:true,
         slidesToShow:3,
-        // autoplay:true,
+        autoplay:true,
         centerMode:true,
         variableWidth:true,
         // responsive:[
