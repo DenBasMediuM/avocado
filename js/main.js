@@ -221,7 +221,7 @@ $(document).ready(function(){
         autoplay:true,
         centerMode:true,
         variableWidth:true,
-        infinite:false
+        // infinite:false
         // responsive:[
         //     {
         //         breakpoint: 700,
