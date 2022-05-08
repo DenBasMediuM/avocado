@@ -45,8 +45,8 @@
 </div>
     <div class="modal">
   <div class="modal_title">Хорошая еда объединяет людей</div>
-  <button class="modal_but button">Посмотреть меню</button>
-  <button class="modal_but1 button">Забронировать</button>
+  <button onClick='location.href="#menu"' class="modal_but button">Посмотреть меню</button>
+  <button onClick='location.href="#svyaz"' class="modal_but1 button">Забронировать</button>
 </div>
 
 <div class="sidebar_seti">
@@ -405,6 +405,7 @@
 	</div>
 </section>
     
+    <div id="arrowTop" hidden></div>
 
     <script src="libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -459,7 +460,7 @@
 				с Никитского переулка
 			</div>
 			<div class="col-md-3 foot-right">
-				<button type="button" class="button_footer">Забронировать</button>
+				<button onClick='location.href="#svyaz"' type="button" class="button_footer">Забронировать</button>
 				<div class="mail">avocadocafe@mail.ru</div>
 				<div class="tel">+7 (495) 621 77 19</div>
 				<div class="tel">+7 (495) 629 28 02</div>
